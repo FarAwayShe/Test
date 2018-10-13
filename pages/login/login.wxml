@@ -1,0 +1,21 @@
+<!-- <view class='head'>
+
+</view>
+<form bindsubmit='formSubmit'>
+  <view class='page-body'>
+    <view class='input'>
+      <input class='input' auto-focus='true' placeholder='name'/>
+    </view>
+    <view style='height:20rpx;background-color:white'></view>
+    <view class='input'>
+      <input class='input' placeholder='password' password='true'></input>
+    </view>
+  </view>
+  <view class='button'>
+    <button form-type='submit' type='primary'>登录</button>
+    <navigator url='../register/register'>
+      <button >注册</button>
+    </navigator>
+  </view>
+</form> -->
+

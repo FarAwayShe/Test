@@ -1,0 +1,17 @@
+.head{
+  height: 300rpx
+}
+.page-body{
+  margin: auto;
+  width: 70%;
+  background-color:gainsboro;
+}
+.input{
+  margin-left: 20rpx;
+  height: 2.58823529em;
+  min-height: 2.58823529em;
+  line-height: 2.58823529em;
+}
+.button{
+  margin: 10% 10% 10% 10%; 
+}

@@ -1,0 +1,25 @@
+.register{
+ margin-top: 100rpx 
+}
+.input{
+margin-left: 50rpx;
+margin-right: 50rpx;
+border-bottom: 3rpx solid green;
+height: 60rpx
+}
+.image{
+  margin: auto;
+  width: 25%
+}
+.text{
+
+}
+.input-button{
+  
+}
+.button{
+  width: 500rpx;
+  margin: auto;
+  margin-top: 150rpx
+
+}

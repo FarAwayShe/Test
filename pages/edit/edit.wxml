@@ -1,0 +1,33 @@
+<!--pages/edit/edit.wxml-->
+<view style='position:relative;height:100%'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <van-cell-group>
+      <van-field
+        value="{{ message }}"
+        type="textarea"
+        placeholder="说点什么"
+        autosize
+        border="{{ false }}"
+      />
+    </van-cell-group>
+    <view wx:if="{{tempFilePaths}}"  class='showimage'>
+      <block wx:for="{{tempFilePaths}}">
+        <view class='images'>
+          <image src='{{item}}' mode='aspectFill' class='image'></image>
+          <image src='../../image/删除.png' class='del-image' id='{{index}}' bindtap='del_image'></image>
+        </view>
+      </block>
+    </view>
+    <view class='bottom'>
+      <view class='local' bindtap='getlocal'>位置</view>
+      <view class='chooseimage' bindtap='chooseImage'>图片</view>
+      <view class='picker'>
+      <picker mode = selector bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view>{{array[index]}}</view>
+      </picker>
+      </view>
+    </view>
+  </form>
+</view>
+<view>
+</view>

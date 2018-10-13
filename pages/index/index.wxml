@@ -1,0 +1,61 @@
+<view class="page" bindtouchend='touchend' bindtouchstart='touchstart'>
+  <!-- 侧滑栏 -->
+  <view class="page_tab">
+    <view class='user_head'>
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type='getUserInfo' bindgetuserinfo='getUserInfo'>登录</button>
+      <block wx:else>
+        <image src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+    <view class='page_tab_content'>
+      <view>
+        <navigator url=''>
+          <image src='../../image/setting.png'></image>
+          <text style=''>设置</text>
+        </navigator>
+      </view>
+      <view style='margin-top:50rpx'>
+        <navigator>
+          <image src='../../image/about.png'></image>
+          <text>关于</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class="bg" bindtap='hideview' style='display:{{display}}'></view>
+  <!-- 主页 -->
+  <view class="home" style="{{translate}}">
+    <view bindtap='showview' style='background-color:white;padding-left:20rpx'>
+      <image src='../../image/菜单.png' style='max-width:45rpx;max-height:45rpx'></image>
+    </view>
+    <block wx:for="{{array}}" wx:key="">
+      <view class='home-content'>
+        <view class='home-content-top'>
+          <image src='{{item.user_head}}'></image>
+          <text class='home-content-top-name'>{{item.name}}</text>
+          <text class='home-content-top-time'>{{item.time}}</text>
+        </view>
+        <view class='home-content-centent'>
+          <block wx:if="{{item.text !==' '}}"><text>{{item.text}}</text></block>
+          <block wx:if="{{item.images !==' '}}">
+            <view wx:for="{{item.images}}" wx:for-index="idx" wx:key="key" wx:for-item="image" class='home-content-centent-images'>
+              <view class='home-content-centent-image'>
+                <image src='{{image}}' mode='aspectFit'></image>
+              </view>
+            </view>
+          </block>
+        </view>
+        <view class='home-content-bottom'>
+          <view class='home-content-bottom-share'>
+              <image src='../../image/分享.png'></image>
+            </view>
+          <view class='home-content-bottom-zan' bindtap='changeZan'>
+            <image src="{{item.zan == true ? '../../image/点赞1.png' : '../../image/点赞.png'}}" mode="aspectFill" id='{{array[index]._id}}'></image>
+            <text>{{array[index].countzan}}</text>
+          </view>
+        </view>
+      </view>
+    </block>  
+  </view>
+</view>

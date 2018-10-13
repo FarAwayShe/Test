@@ -1,0 +1,21 @@
+<view class='register'>
+  <view class='image'>
+    <image src='../../image/身份证.png' bindtap='' style='max-width:200rpx;max-height:200rpx'></image>
+  </view>
+  <form bindsubmit='formSubmit'>
+    <view style='margin-top:100rpx'>
+      <view class='input'>
+        <input class='input-botton' focus='true' required placeholder='昵称：'></input>
+      </view>
+      <view class='input'>
+        <input class='input-botton' password='true' required placeholder='密码：'></input>
+      </view>
+      <view class='input'>
+        <input class='input-botton' password='true' required placeholder='确认密码：'></input>
+      </view>
+    </view>
+    <view class='button'>
+      <button class='' form-type='submit' type='primary'>注册</button>
+    </view>
+  </form>
+</view>
